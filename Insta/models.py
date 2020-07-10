@@ -1,5 +1,6 @@
 from django.db import models
 from imagekit.models import ProcessedImageField
+from django.urls import reverse
 
 class Post(models.Model):
     title = models.TextField(blank=True, null=True)
@@ -9,6 +10,10 @@ class Post(models.Model):
         options={'quality': 100},
         blank=True,
         null=True,
-
     )
+
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('post_detail', args=[str(self.id)])
+
 
