@@ -1,4 +1,23 @@
 <div>
+    <ul>
+        {% if request.user.is_authenticated%}
+         <li>
+            <a href="{% url 'logout' %}"> logout</a>
+        </li>
+        {%else%}
+        <li>
+            <a href="{% url 'login' %}"> login</a>
+        </li>
+        <li>
+            <a href="{% url 'signup' %}"> Signup</a>
+        </li>
+        {%endif%}
+    </ul>
+
+</div>
+
+
+<div>
     <a href="{% url 'make_post'%}">MakePost </a>
 </div>
 
