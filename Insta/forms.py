@@ -6,4 +6,4 @@ from Insta.models import InstaUser
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = InstaUser
-        fields = ('username', 'email', 'profile_pic')
+        fields = ('username', 'email', 'profile_pic',)
