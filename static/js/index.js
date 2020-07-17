@@ -19,7 +19,7 @@ function create_like(success_cb, error_cb) {
         data: {
             post_pk: post_pk
         },
-        success: function(data) { success_cb(data); },
+        success: function(data) {  success_cb(data); },
         error: function(error) { error_cb(error); }
     });
 }
