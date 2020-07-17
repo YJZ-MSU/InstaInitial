@@ -12,6 +12,8 @@ pillow = "*"
 django-annoying = "*"
 heroku = "*"
 gunicorn = "*"
+whitenoise = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.8"
